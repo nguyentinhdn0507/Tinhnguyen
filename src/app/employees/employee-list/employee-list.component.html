@@ -7,10 +7,15 @@
     </thead>
     <tbody>
       <tr *ngFor="let emp of list">
-        <td (click)="onEdit(emp)">{{emp.empCode}} - {{emp.fullName}}</td>
-        <td (click)="onEdit(emp)">{{emp.position}}</td>
-        <td (click)="onEdit(emp)">{{emp.mobile}}</td>
-        <td><a class="btn text-warning" (click)="onDelete(emp.id)"><i class="fa fa-trash"></i></a></td>
+        <td (click)="onEdit(emp)">{{emp.data.Code}} - {{emp.data.fullName}}</td>
+        <td (click)="onEdit(emp)">{{emp.data.position}}</td>
+        <td (click)="onEdit(emp)">{{emp.data.mobile}}</td>
+        <td>
+          <a class="btn btn-sm btn-info text-white" (click)="onEdit(emp.id)">
+            <i class="far fa-edit"></i>
+          </a>
+          <a class="btn text-warning" (click)="onDelete(emp.id)"><i class="fa fa-trash"></i></a>
+        </td>
       </tr>
     </tbody>
   </table>

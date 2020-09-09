@@ -27,8 +27,11 @@ export class EmployeeListComponent implements OnInit {
     });
   }
 
-  onEdit(emp: any) {
+  onEdit(emp: string) {
     this.service.formData = Object.assign({}, emp);
+    if (confirm("Are you sure to Edit this record?")) {
+      this.toastr.warning(' successfully');
+    }
   }
   onDelete(id: string) {
     if (confirm("Are you sure to delete this record?")) {
