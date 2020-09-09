@@ -30,7 +30,7 @@ export class EmployeeListComponent implements OnInit {
   onEdit(emp: string) {
     this.service.formData = Object.assign({}, emp);
     if (confirm("Are you sure to Edit this record?")) {
-      this.toastr.warning(' successfully');
+      this.toastr.warning('Edit successfully');
     }
   }
   onDelete(id: string) {
